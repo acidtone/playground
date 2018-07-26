@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gryd Test</title>
+  <style type="text/css">
+    body {
+      height: 100vh;
+      display: flex;
+    }
+
+    main {
+      height: 80vmin;
+      width: 80vmin;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+    section:nth-child(1) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      background: lightgreen;
+    }
+    section:nth-child(2) {
+      grid-column-start: -2;
+      grid-column-end: -1;
+      grid-row-start: -2;
+      grid-row-end: -1;
+      background: lightblue;
+    }
+    main:hover {
+      /* 
+      can't animate track sizes with 'transition'? 
+      https://www.w3.org/TR/css-grid-1/#track-sizing
+      it should be possible
+      */
+      grid-template-columns: 1fr 1fr 2fr;
+      grid-template-rows: 1fr 1fr 2fr;
+      transition-duration: 250ms;
+    }
+    section:nth-child(2):hover {
+      /* can't animate explicit grid placement with 'transition'? */
+      grid-column-start: -3;
+      grid-row-start: -3;
+      transition-duration: 250ms;
+    }
+
+
+  </style>
+</head>
+<body>
+  <main>
+    <section></section>
+    <section></section>
+  </main>
+</body>
+</html>

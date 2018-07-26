@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid Example: Weave Pattern 1</title>
+  <style type="text/css">
+    * {
+      /* make life easier */
+      box-sizing: border-box;
+    }
+    body {
+      /* set up for centering content */
+      height: 100vh;
+      display: flex;
+
+    }
+    main {
+      /* make a box that's 80% of the smaller viewport dimension */
+      width: 80vmin;
+      height: 80vmin;
+      
+      /* center the box and make it visible */
+      margin: auto;
+
+      /* center the content of the box */
+      /* don't want the content centered? set display to block (justify-content and align items don't do anything on a block container) */
+      display: grid;
+      grid-template-columns: repeat(11, 1fr);
+      grid-template-rows: repeat(11, 1fr);
+
+      justify-content: center;
+      align-items: center;
+
+      border: 3px solid #333;
+    }
+    article {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    article:nth-child(even) {
+      background-color: steelblue;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+
+    article:nth-child(even)::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 20%;
+      background-image: linear-gradient(rgba(0,0,0,.5), transparent);
+    }
+
+    article:nth-child(even)::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 20%;
+      background-image: linear-gradient(transparent, rgba(0,0,0,.5));
+    }
+
+
+    article:nth-child(odd) {
+      background-color: tan;
+      border-left: 1px solid #333;
+      border-right: 1px solid #333;
+    }
+
+    article:nth-child(odd)::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 20%;
+      height: 100%;
+      background-image: linear-gradient(to right, rgba(0,0,0,.5), transparent);
+    }
+    
+    article:nth-child(odd)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 20%;
+      height: 100%;
+      background-image: linear-gradient(to right, transparent, rgba(0,0,0,.5));
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+    <article></article>
+  </main>
+</body>
+</html>

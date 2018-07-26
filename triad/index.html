@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Triad of Circles</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* from https://sab.webflow.io/blend-modes */
+    .mbm-normal{mix-blend-mode: normal;}
+    .mbm-multiply{mix-blend-mode: multiply;}
+    .mbm-screen{mix-blend-mode: screen;}
+    .mbm-overlay{mix-blend-mode: overlay;}
+    .mbm-darken{mix-blend-mode: darken;}
+    .mbm-lighten{mix-blend-mode: lighten;}
+    .mbm-color-dodge{mix-blend-mode: color-dodge}
+    .mbm-color-burn{mix-blend-mode: color-burn;}
+    .mbm-hard-light{mix-blend-mode: hard-light;}
+    .mbm-soft-light{mix-blend-mode: soft-light;}
+    .mbm-difference{mix-blend-mode: difference;}
+    .mbm-exclusion{mix-blend-mode: exclusion;}
+    .mbm-hue{mix-blend-mode: hue;}
+    .mbm-saturation{mix-blend-mode: saturation;}
+    .mbm-color{mix-blend-mode: color;}
+    .mbm-luminosity{mix-blend-mode: luminosity;}
+
+    .grid {
+      width: 50vmin;
+      height: 50vmin;
+      margin: auto;
+      position: relative;
+    }
+    .grid > article {
+      width: 30vmin;
+      height: 30vmin;
+      border-radius: 15vmin;
+      position: absolute;
+      mix-blend-mode: screen;
+    }
+
+    .circle1 {
+      background-color: red;
+      top: 0;
+      left: 50%;
+      margin-left: -15vmin;
+    }
+    .circle2 {
+      background-color: green;
+      bottom: 0;
+      left: 0
+    }
+    .circle3 {
+      background-color: blue;
+      bottom: 0;
+      right: 0;
+    }  </style>
+</head>
+<body>
+  <main class="grid">
+    <article class="circle1"></article>
+    <article class="circle2"></article>
+    <article class="circle3"></article>
+  </main>
+</body>
+</html>

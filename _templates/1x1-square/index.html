@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fluid Typography</title>
+  <style type="text/css">
+    * {
+      /* make life easier */
+      box-sizing: border-box;
+    }
+    body {      
+      /* set up for centering content */
+      height: 100vh;
+      display: flex;
+
+    }
+    main {
+      /* make a box that's 80% of the smaller viewport dimension */
+      width: 80vmin;
+      height: 80vmin;
+      
+      /* center the box and make it visible */
+      margin: auto;
+      background-color: gainsboro;
+
+      /* center the content of the box */
+      /* don't want the content centered? set display to block (justify-content and align items don't do anything on a block container) */
+      display: block;
+      justify-content: center;
+      align-items: center;
+    }
+
+  </style>
+</head>
+<body>
+  <main>This is content.</main>
+</body>
+</html>
