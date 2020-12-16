@@ -1,0 +1,137 @@
+:root {
+  --contrast: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+div > img {
+  filter: contrast(var(--contrast));
+  transition: all 0.1s ease;
+}
+
+body > main, body > img {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+body > img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+main {
+  display: flex;
+  justify-items: center;
+  width: min-content;
+  margin: auto;
+}
+
+aside {
+  width: max-content;
+}
+
+section {
+  margin: auto;
+  padding: 1em;
+  width: 90vmin;
+  height: 90vmin;
+  
+  background-color: red;
+  border: 1px solid black;
+  border-radius: .5em;
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4,1fr);
+  grid-gap: 1em;
+}
+
+section > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+section > div > * {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+div:nth-child(1) > img {
+  mix-blend-mode: normal;
+}
+
+div:nth-child(2) > img {
+  mix-blend-mode: multiply;
+}
+
+div:nth-child(3) > img {
+  mix-blend-mode: screen;
+}
+
+div:nth-child(4) > img {
+  mix-blend-mode: overlay;
+}
+
+div:nth-child(5) > img {
+  mix-blend-mode: darken;
+}
+
+div:nth-child(6) > img {
+  mix-blend-mode: lighten;
+}
+
+div:nth-child(7) > img {
+  mix-blend-mode: color-dodge;
+}
+
+div:nth-child(8) > img {
+  mix-blend-mode: color-burn;
+}
+
+div:nth-child(9) > img {
+  mix-blend-mode: hard-light;
+}
+
+div:nth-child(10) > img {
+  mix-blend-mode: soft-light;
+}
+
+div:nth-child(11) > img {
+  mix-blend-mode: difference;
+}
+
+div:nth-child(12) > img {
+  mix-blend-mode: exclusion;
+}
+
+div:nth-child(13) > img {
+  mix-blend-mode: hue;
+}
+
+div:nth-child(14) > img {
+  mix-blend-mode: saturation;
+}
+
+div:nth-child(15) > img {
+  mix-blend-mode: color;
+}
+
+div:nth-child(16) > img {
+  mix-blend-mode: luminosity;
+}

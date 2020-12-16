@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colour Harmony Wheel</title>
+  <link rel="stylesheet" href="https://acidtone.github.io/core/v0/css/reset.css">
+  <link rel="stylesheet" href="https://acidtone.github.io/core/v0/css/utilities.css">
+  <style>
+    :root {
+      --hue: 0;
+      --deflect1: 60;
+      --deflect2: 180;
+      --deflect3: 240;
+    }
+    
+    svg {
+      width: 50vmin;
+      height: 50vmin;
+    }
+
+    g {
+      transform-origin: center;
+    }
+
+    .hue1 {
+      transform: rotate(calc(var(--hue) * 1deg));
+    }
+    .hue1 circle {
+      fill: hsla(var(--hue),100%,50%);
+    }
+
+    .hue2 {
+      --hue2: calc((var(--hue) + var(--deflect1)) * 1deg);
+      transform: rotate(var(--hue2));
+    }
+    .hue2 circle {
+      fill: hsla(var(--hue2),100%,50%);
+    }
+
+    .hue3 {
+      --hue3: calc((var(--hue) + var(--deflect2)) * 1deg);
+      transform: rotate(var(--hue3));
+    }
+    .hue3 circle {
+      fill: hsla(var(--hue3),100%,50%);
+    }
+
+    .hue4 {
+      --hue4: calc((var(--hue) + var(--deflect3)) * 1deg);
+      transform: rotate(var(--hue4));
+    }
+    .hue4 circle {
+      fill: hsla(var(--hue4),100%,50%);
+    }
+
+</style>
+</head>
+<body>
+  <form action="#">
+    <label for="slider">
+      <input id="slider" type="range" min="0" max="360" value="0">
+    </label>
+    <output></output>
+  </form>
+  <main class="full-height center-child">
+    <svg viewBox="0 0 520 520">
+      <circle r="250" cx="260" cy="260" fill="none" stroke="black" stroke-width="1" />
+      <g id="hue1" class="hue1">
+        <line class="hand" x1="260" y1="10" x2="260" y2="260" stroke="black" stroke-width="2" />
+        <circle class="handle" r="10" cx="260" cy="10" fill="none" stroke="black" stroke-width="1" />
+      </g>
+      <g id="hue2" class="hue2">
+        <line x1="260" y1="10" x2="260" y2="260" stroke="black" stroke-width="2" />
+        <circle r="10" cx="260" cy="10" fill="none" stroke="black" stroke-width="1" />
+      </g>
+      <g id="hue3" class="hue3">
+        <line x1="260" y1="10" x2="260" y2="260" stroke="black" stroke-width="2" />
+        <circle r="10" cx="260" cy="10" fill="none" stroke="black" stroke-width="1" />
+      </g>
+      <g id="hue4" class="hue4">
+        <line x1="260" y1="10" x2="260" y2="260" stroke="black" stroke-width="2" />
+        <circle r="10" cx="260" cy="10" fill="none" stroke="black" stroke-width="1" />
+      </g>
+    </svg>
+  </main>
+  
+  <script>
+    const root = document.querySelector(':root');
+    const slider = document.getElementById('slider');
+    const viewportOffset = document.querySelector('svg').getBoundingClientRect();
+    const handle = document.querySelector('#hue1 .handle');
+    const hand = document.querySelector('line.hand');
+    const output = document.querySelector('output');
+
+    // TODO: add an absolutely positioned element to symbolize the calculated origin of the hand.
+    //  1. Calculate the position based on pixel-accurate viewBox plus x2 and y2 of hand. Not sure how the transform-origin works; is it relative to the viewBox or the hand? Does the hand have it's own viewBox inherited from `svg`?
+    console.log(viewportOffset.top);
+
+    slider.addEventListener('input', function(evt) {
+      root.style.setProperty('--hue',`${slider.value}`);
+
+      output.value = " " + hand.x2.baseVal.value;
+      output.value += " " + hand.y2.baseVal.value;  
+    })
+  </script>
+</body>
+</html>

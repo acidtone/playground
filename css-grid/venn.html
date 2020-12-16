@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fluid Typography</title>
+  <style type="text/css">
+    * {
+      /* make life easier */
+      box-sizing: border-box;
+    }
+    body {      
+      /* set up for centering content */
+      height: 100vh;
+      display: flex;
+
+    }
+    main {
+      /* make a box that's 80% of the smaller viewport dimension */
+      width: 80vmin;
+      height: 80vmin;
+      
+      /* center the box */
+      margin: auto;
+
+      /* center the content of the box */
+      /* don't want the content centered? set display to block (justify-content and align items don't do anything on a block container) */
+      display: grid;
+      justify-content: center;
+      align-items: center;
+
+      /* setup base grid */
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
+    }
+    section {
+      width: 30vmin;
+      height: 30vmin;
+      border-radius: 15vmin;
+    }
+
+    section:nth-child(1) {
+      margin: auto;
+      background-color: red;
+      background-color: hsla(calc(), 100%, 50%,1);
+      grid-column: 1 / 4;
+      grid-row: 1 / 3        
+    }
+    section:nth-child(2) {
+      margin: auto;
+      background-color: green;
+      grid-column: 1 / 3;
+      grid-row: 2 / 4;        
+    }
+    section:nth-child(3) {
+      margin: auto;
+      background-color: blue;
+      grid-column: 2 / 4;
+      grid-row: 2 / 4;        
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <section></section>
+    <section></section>
+    <section></section>
+  </main>
+</body>
+</html>

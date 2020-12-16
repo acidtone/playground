@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mix Blend Mode Test</title>
+  <style>
+    body {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      place-items: center;
+      
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    
+    img, div {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+    }
+    img {
+      mix-blend-mode: screen;
+    }
+    div {
+      width: 500px;
+      height: 500px;
+
+      font-size: 10em;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+    <div></div>
+    <img src="https://picsum.photos/500/500" alt="Random Image">
+</body>
+</html>

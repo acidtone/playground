@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Name Swatch</title>
+  <link rel="stylesheet" href="https://acidtone.github.io/core/v0/css/reset.css">
+  <link rel="stylesheet" href="https://acidtone.github.io/core/v0/css/utilities.css">
+  <script type="module" src="js/app.mjs"></script>
+  <style>
+    main {
+
+    }
+    article {
+      width: 25vmin;
+      height: 25vmin;
+      display: flex;
+      background-color: var(--clr);
+    }
+    article::before {
+      content: attr(data-color);
+      display: block;
+      margin: auto;
+    }
+
+    .name {
+      --clr: var(--name)
+    }
+    .hex {
+      --clr: var(--hex);
+    }
+    .rgb {
+      --clr: rgb(var(--red), var(--green), var(--blue));
+    }
+    .hsl {
+      --clr: hsl(var(--hue), var(--sat), var(--lum));
+    }
+
+    /*********/
+    /* Grays */
+    /*********/
+
+    .black {
+      --name: black;
+
+      --hex: #000000;
+
+      --red: 0;
+      --green: 0;
+      --blue: 0;
+
+      --hue: -1;
+      --sat: -1%;
+      --lum: 0%;
+    }   
+    
+    .dimgray {
+      --name: dimgrey;
+      --name: dimgray;
+
+      --hex: #696969;
+
+      --red: 105;
+      --green: 105;
+      --blue: 105;
+
+      --hue: -1;
+      --sat: -1%;
+      --lum: 41%;
+    }   
+
+    .gray {
+      --name: grey; /* alias */
+      --name: gray;
+      
+      --hex: #808080;
+      
+      --red: 128;
+      --green: 128;
+      --blue: 128;
+      
+      --hue: -1;
+      --sat: -1%;
+      --lum: 50%;
+    }
+
+    .darkgray {
+      --name: darkgray;
+      
+      --hex: #808080;
+      
+      --red: 169;
+      --green: 169;
+      --blue: 169;
+      
+      --hue: -1;
+      --sat: -1%;
+      --lum: 66%;
+    }
+
+    .silver {
+      --name: silver;
+
+      --hex: #c0c0c0;
+
+      --red: 192;
+      --green: 192;
+      --blue: 192;
+
+      --hue: -1;
+      --sat: -1%;
+      --lum: 75%;
+    }
+
+    .gainsboro {
+      --name: gainsboro;
+
+      --hex: #dcdcdc;
+
+      --red: 220;
+      --green: 220;
+      --blue: 220;
+
+      --hue: -1;
+      --sat: -1%;
+      --lum: 86%;
+    }
+
+    .white {
+      --name: white;
+
+      --hex: #ffffff;
+
+      --red: 255;
+      --green: 255;
+      --blue: 255;
+
+      --hue: -1;
+      --sat: -1%;
+      --lum: 100%;
+    }
+
+    /********/
+    /* Reds */
+    /********/
+
+    .crimson {
+      --name: crimson;
+
+      --hex: #dc143c;
+
+      --red: 220;
+      --green: 20;
+      --blue: 60;
+
+      --hue: 348;
+      --sat: 83%;
+      --lum: 47%;
+    }
+
+    .brown {
+      --name: brown;
+
+      --hex: #a52a2a;
+
+      --red: 165;
+      --green: 42;
+      --blue: 42;
+
+      --hue: 0;
+      --sat: 59%;
+      --lum: 41%;
+    }
+
+    .indianred {
+      --name: indianred;
+
+      --hex: #cd5c5c;
+
+      --red: 205;
+      --green: 92;
+      --blue: 92;
+
+      --hue: 0;
+      --sat: 53%;
+      --lum: 58%;
+    }
+
+    .darkred {
+      --name: darkred;
+
+      --hex: #8b0000;
+
+      --red: 139;
+      --green: 0;
+      --blue: 0;
+
+      --hue: 0;
+      --sat: 100%;
+      --lum: 27%;
+    }
+
+    .firebrick {
+      --name: firebrick;
+
+      --hex: #b22222;
+
+      --red: 178;
+      --green: 34;
+      --blue: 34;
+
+      --hue: 0;
+      --sat: 68%;
+      --lum: 42%;
+    }
+
+    .maroon {
+      --name: maroon;
+
+      --hex: #800000;
+
+      --red: 128;
+      --green: 0;
+      --blue: 0;
+
+      --hue: 0;
+      --sat: 100%;
+      --lum: 25%;
+    }
+
+    .red {
+      --name: red;
+
+      --hex: #ff0000;
+
+      --red: 255;
+      --green: 0;
+      --blue: 0;
+
+      --hue: 0;
+      --sat: 100%;
+      --lum: 50%;
+    }
+
+    .lightcoral {
+      --name: lightcoral;
+
+      --hex: #f08080;
+
+      --red: 240;
+      --green: 128;
+      --blue: 128;
+
+      --hue: 0;
+      --sat: 79%;
+      --lum: 72%;
+    }
+    .darksalmon {
+      --name: darksalmon;
+
+      --hex: #e9967a;
+
+      --red: 233;
+      --green: 150;
+      --blue: 122;
+
+      --hue: 15;
+      --sat: 72%;
+      --lum: 70%;
+    }
+
+    .coral {
+      --name: coral;
+
+      --hex: #ff7f50;
+
+      --red: 255;
+      --green: 127;
+      --blue: 80;
+
+      --hue: 16;
+      --sat: 100%;
+      --lum: 66%;
+    }
+    
+    /***********/
+    /* Oranges */
+    /***********/
+
+    .darkorange {
+      --name: darkorange;
+
+      --hex: #ff8c00;
+
+      --red: 255;
+      --green: 140;
+      --blue: 0;
+
+      --hue: 33;
+      --sat: 100%;
+      --lum: 50%;
+    }
+
+    .burlywood {
+      --name: burlywood;
+
+      --hex: #deb887;
+
+      --red: 222;
+      --green: 184;
+      --blue: 135;
+
+      --hue: 34;
+      --sat: 57%;
+      --lum: 70%;
+    }
+
+    .orange {
+      --name: orange;
+
+      --hex: #ffa500;
+
+      --red: 255;
+      --green: 165;
+      --blue: 0;
+
+      --hue: 39;
+      --sat: 100%;
+      --lum: 50%;
+    }
+
+    .bisque {
+      --name: bisque;
+
+      --hex: #ffe4c4;
+
+      --red: 255;
+      --green: 228;
+      --blue: 196;
+
+      --hue: 33;
+      --sat: 100%;
+      --lum: 88%;
+    }
+
+    .chocolate {
+      --name: chocolate;
+
+      --hex: #d2691e;
+
+      --red: 210;
+      --green: 105;
+      --blue: 30;
+
+      --hue: 25;
+      --sat: 75%;
+      --lum: 47%;
+    }
+
+    .blanchedalmond {
+      --name: blanchedalmond;
+
+      --hex: #ffebcd;
+
+      --red: 255;
+      --green: 235;
+      --blue: 205;
+
+      --hue: 36;
+      --sat: 100%;
+      --lum: 90%;
+    }
+
+    .antiquewhite {
+      --name: antiquewhite;
+
+      --hex: #faebd7;
+
+      --red: 250;
+      --green: 235;
+      --blue: 215;
+
+      --hue: 34;
+      --sat: 78%;
+      --lum: 91%;
+    } 
+
+    .floralwhite {
+      --name: floralwhite;
+
+      --hex: #fffaf0;
+
+      --red: 255;
+      --green: 250;
+      --blue: 240;
+
+      --hue: 40;
+      --sat: 100%;
+      --lum: 97%;
+    } 
+
+    .darkgoldenrod {
+      --name: darkgoldenrod;
+
+      --hex: #b8860b;
+
+      --red: 184;
+      --green: 134;
+      --blue: 11;
+
+      --hue: 43;
+      --sat: 89%;
+      --lum: 38%;
+    }
+
+    .goldenrod {
+      --name: goldenrod;
+
+      --hex: #daa520;
+
+      --red: 218;
+      --green: 165;
+      --blue: 32;
+
+      --hue: 43;
+      --sat: 74%;
+      --lum: 49%;
+    }
+
+    .cornsilk {
+      --name: cornsilk;
+
+      --hex: #fff8dc;
+
+      --red: 255;
+      --green: 248;
+      --blue: 220;
+
+      --hue: 48;
+      --sat: 100%;
+      --lum: 93%;
+    } 
+
+    .darkkhaki {
+      --name: darkkhaki;
+
+      --hex: #bdb76b;
+
+      --red: 189;
+      --green: 183;
+      --blue: 107;
+
+      --hue: 56;
+      --sat: 38%;
+      --lum: 58%;
+    } 
+
+    /***********/
+    /* Yellows */
+    /***********/
+
+    .gold {
+      --name: gold;
+
+      --hex: #ffd700;
+
+      --red: 255;
+      --green: 215;
+      --blue: 0;
+
+      --hue: 51;
+      --sat: 100%;
+      --lum: 50%;
+    }
+
+    .khaki {
+      --name: khaki;
+
+      --hex: #f0e68c;
+
+      --red: 240;
+      --green: 230;
+      --blue: 140;
+
+      --hue: 54;
+      --sat: 77%;
+      --lum: 75%;
+    }
+
+    .lemonchiffon {
+      --name: lemonchiffon;
+
+      --hex: #fffacd;
+
+      --red: 255;
+      --green: 250;
+      --blue: 205;
+
+      --hue: 54;
+      --sat: 100%;
+      --lum: 90%;
+    }
+
+    .olive {
+      --name: olive;
+
+      --hex: #808000;
+
+      --red: 128;
+      --green: 128;
+      --blue: 0;
+
+      --hue: 60;
+      --sat: 100%;
+      --lum: 25%;
+    }
+
+    .beige {
+      --name: beige;
+
+      --hex: #f5f5dc;
+
+      --red: 245;
+      --green: 245;
+      --blue: 220;
+
+      --hue: 60;
+      --sat: 56%;
+      --lum: 91%;
+    }
+
+    .yellow {
+      --name: yellow;
+
+      --hex: #ffff00;
+
+      --red: 255;
+      --green: 255;
+      --blue: 0;
+
+      --hue: 60;
+      --sat: 100%;
+      --lum: 50%;
+    }
+
+    .ivory {
+      --name: ivory;
+
+      --hex: #fffff0;
+
+      --red: 255;
+      --green: 255;
+      --blue: 240;
+
+      --hue: 60;
+      --sat: 100%;
+      --lum: 97%;
+    }
+
+    .lightgoldenrodyellow {
+      --name: lightgoldenrodyellow;
+
+      --hex: #fafad2;
+
+      --red: 250;
+      --green: 250;
+      --blue: 210;
+
+      --hue: 60;
+      --sat: 80%;
+      --lum: 90%;
+    }
+
+    .darkolivegreen {
+      --name: darkolivegreen;
+
+      --hex: #556b2f;
+
+      --red: 85;
+      --green: 107;
+      --blue: 47;
+
+      --hue: 82;
+      --sat: 39%;
+      --lum: 30%;
+    }
+
+    /***************/
+    /* Chartreuses */
+    /***************/
+
+    .greenyellow {
+      --name: greenyellow;
+
+      --hex: #adff2f;
+
+      --red: 173;
+      --green: 255;
+      --blue: 47;
+
+      --hue: 84;
+      --sat: 100%;
+      --lum: 59%;
+    }
+
+    .chartreuse {
+      --name: chartreuse;
+
+      --hex: #7fff00;
+
+      --red: 127;
+      --green: 255;
+      --blue: 0;
+
+      --hue: 90;
+      --sat: 100%;
+      --lum: 50%;
+    }
+
+    .lawngreen {
+      --name: lawngreen;
+
+      --hex: #7cfc00;
+
+      --red: 124;
+      --green: 252;
+      --blue: 0;
+
+      --hue: 90;
+      --sat: 100%;
+      --lum: 49%;
+    }
+
+    /**********/
+    /* Greens */
+    /**********/
+
+    .green {
+      --name: green;
+
+      --hex: #008000;
+
+      --red: 0;
+      --green: 128;
+      --blue: 0;
+
+      --hue: 120;
+      --sat: 100%;
+      --lum: 25%;
+    }
+
+    .lime {
+      --name: lime;
+
+      --hex: #00ff00;
+
+      --red: 0;
+      --green: 255;
+      --blue: 0;
+
+      --hue: 120;
+      --sat: 100%;
+      --lum: 50%;
+    }
+
+    .darkseagreen {
+      --name: darkseagreen;
+
+      --hex: #8fbc8f;
+
+      --red: 143;
+      --green: 188;
+      --blue: 143;
+
+      --hue: 120;
+      --sat: 25%;
+      --lum: 65%;
+    }
+
+    .forestgreen {
+      --name: forestgreen;
+
+      --hex: #228b22;
+
+      --red: 34;
+      --green: 139;
+      --blue: 34;
+
+      --hue: 120;
+      --sat: 61%;
+      --lum: 34%;
+    }
+
+    .honeydew {
+      --name: honeydew;
+
+      --hex: #f0fff0;
+
+      --red: 240;
+      --green: 255;
+      --blue: 240;
+
+      --hue: 120;
+      --sat: 100%;
+      --lum: 97%;
+    }
+
+
+    /*****************/
+    /* Spring Greens */
+    /*****************/
+
+    /*********/
+    /* Cyans */
+    /*********/
+
+    .aquamarine {
+      --name: aquamarine;
+
+      --hex: #7fffd4;
+
+      --red: 127;
+      --green: 255;
+      --blue: 212;
+
+      --hue: 160;
+      --sat: 100%;
+      --lum: 75%;
+    }
+
+    .darkcyan {
+      --name: darkcyan;
+
+      --hex: #008b8b;
+
+      --red: 0;
+      --green: 139;
+      --blue: 139;
+
+      --hue: 180;
+      --sat: 100%;
+      --lum: 27%;
+    }
+    
+    .teal {
+      --name: teal;
+
+      --hex: #008080;
+
+      --red: 0;
+      --green: 128;
+      --blue: 128;
+
+      --hue: 180;
+      --sat: 100%;
+      --lum: 25%;
+    }
+
+    .aqua {
+      --name: cyan; /* alias */ 
+      --name: aqua;
+
+      --hex: #00ffff;
+
+      --red: 0;
+      --green: 255;
+      --blue: 255;
+
+      --hue: 180;
+      --sat: 100%;
+      --lum: 50%;
+    }
+
+    .azure {
+      --name: azure;
+
+      --hex: #f0ffff;
+
+      --red: 240;
+      --green: 255;
+      --blue: 255;
+
+      --hue: 180;
+      --sat: 100%;
+      --lum: 97%;
+    }
+
+    .darkslategray {
+      --name: darkslategrey;
+      --name: darkslategray;
+
+      --hex: #2f4f4f;
+
+      --red: 47;
+      --green: 79;
+      --blue: 79;
+
+      --hue: 180;
+      --sat: 25%;
+      --lum: 25%;
+    }
+
+    .lightcyan {
+      --name: lightcyan;
+
+      --hex: #e0ffff;
+
+      --red: 224;
+      --green: 255;
+      --blue: 255;
+
+      --hue: 180;
+      --sat: 100%;
+      --lum: 94%;
+    }
+
+    .darkturquoise {
+      --name: darkturquoise;
+
+      --hex: #00ced1;
+
+      --red: 0;
+      --green: 206;
+      --blue: 209;
+
+      --hue: 181;
+      --sat: 100%;
+      --lum: 41%;
+    }
+
+    .cadetblue {
+      --name: cadetblue;
+
+      --hex: #5f9ea0;
+
+      --red: 95;
+      --green: 158;
+      --blue: 160;
+
+      --hue: 182;
+      --sat: 25%;
+      --lum: 50%;
+    }
+
+    .deepskyblue {
+      --name: deepskyblue;
+
+      --hex: #00bfff;
+
+      --red: 0;
+      --green: 191;
+      --blue: 255;
+
+      --hue: 195;
+      --sat: 100%;
+      --lum: 50%;
+    }
+
+    .lightblue {
+      --name: lightblue;
+
+      --hex: #add8e6;
+
+      --red: 173;
+      --green: 216;
+      --blue: 230;
+
+      --hue: 195;
+      --sat: 53%;
+      --lum: 79%;
+    }
+
+    /**********/
+    /* Azures */
+    /**********/
+
+    .dodgerblue {
+      --name: dodgerblue;
+
+      --hex: #1e90ff;
+
+      --red: 30;
+      --green: 144;
+      --blue: 255;
+
+      --hue: 210;
+      --sat: 100%;
+      --lum: 56%;
+    }
+
+    .cornflowerblue {
+      --name: cornflowerblue;
+
+      --hex: #6495ed;
+
+      --red: 100;
+      --green: 149;
+      --blue: 237;
+
+      --hue: 219;
+      --sat: 79%;
+      --lum: 66%;
+    }
+    
+    /*********/
+    /* Blues */
+    /*********/
+
+    .darkblue {
+      --name: darkblue;
+
+      --hex: #00008b;
+
+      --red: 0;
+      --green: 0;
+      --blue: 139;
+
+      --hue: 240;
+      --sat: 100%;
+      --lum: 27%;
+    }
+
+    .navy {
+      --name: navy;
+
+      --hex: #000080;
+
+      --red: 0;
+      --green: 0;
+      --blue: 128;
+
+      --hue: 240;
+      --sat: 100%;
+      --lum: 25%;
+    }
+
+    .blue {
+      --name: blue;
+
+      --hex: #0000ff;
+
+      --red: 0;
+      --green: 0;
+      --blue: 255;
+
+      --hue: 240;
+      --sat: 100%;
+      --lum: 50%;
+    }
+
+    .ghostwhite {
+      --name: ghostwhite;
+
+      --hex: #f8f8ff;
+
+      --red: 248;
+      --green: 248;
+      --blue: 255;
+
+      --hue: 240;
+      --sat: 100%;
+      --lum: 99%;
+    }
+
+    .lavender {
+      --name: lavender;
+
+      --hex: #e6e6fa;
+
+      --red: 230;
+      --green: 230;
+      --blue: 250;
+
+      --hue: 240;
+      --sat: 67%;
+      --lum: 94%;
+    }
+
+    .aliceblue {
+      --name: aliceblue;
+
+      --hex: #f0f8ff;
+
+      --red: 240;
+      --green: 248;
+      --blue: 255;
+
+      --hue: 208;
+      --sat: 100%;
+      --lum: 97%;
+    }   
+
+
+    .darkslateblue {
+      --name: darkslateblue;
+
+      --hex: #483d8b;
+
+      --red: 72;
+      --green: 61;
+      --blue: 139;
+
+      --hue: 248;
+      --sat: 39%;
+      --lum: 39%;
+    }   
+
+    /***********/
+    /* Purples */
+    /***********/
+
+    .rebeccapurple {
+      --name: rebeccapurple;
+
+      --hex: #663399;
+
+      --red: 102;
+      --green: 51;
+      --blue: 153;
+
+      --hue: 270;
+      --sat: 50%;
+      --lum: 40%;
+    }
+
+    .blueviolet {
+      --name: blueviolet;
+
+      --hex: #8a2be2;
+
+      --red: 138;
+      --green: 43;
+      --blue: 226;
+
+      --hue: 271;
+      --sat: 76%;
+      --lum: 53%;
+    }
+
+    .indigo {
+      --name: indigo;
+
+      --hex: #4b0082;
+
+      --red: 75;
+      --green: 0;
+      --blue: 130;
+
+      --hue: 275;
+      --sat: 100%;
+      --lum: 25%;
+    }
+
+    .darkorchid {
+      --name: darkorchid;
+
+      --hex: #9932cc;
+
+      --red: 153;
+      --green: 50;
+      --blue: 204;
+
+      --hue: 280;
+      --sat: 61%;
+      --lum: 50%;
+    }
+
+    .darkviolet {
+      --name: darkviolet;
+
+      --hex: #9400d3;
+
+      --red: 148;
+      --green: 0;
+      --blue: 211;
+
+      --hue: 282;
+      --sat: 100%;
+      --lum: 41%;
+    }
+
+    /***********/
+    /* Magentas */
+    /***********/
+
+    .purple {
+      --name: purple;
+
+      --hex: #800080;
+
+      --red: 128;
+      --green: 0;
+      --blue: 128;
+
+      --hue: 300;
+      --sat: 100%;
+      --lum: 25%;
+    }
+
+    .darkmagenta {
+      --name: darkmagenta;
+
+      --hex: #8b008b;
+
+      --red: 139;
+      --green: 0;
+      --blue: 139;
+
+      --hue: 300;
+      --sat: 100%;
+      --lum: 27%;
+    }
+
+    .fuchsia {
+      --name: fuchsia;
+
+      --hex: #ff00ff;
+
+      --red: 255;
+      --green: 0;
+      --blue: 255;
+
+      --hue: 300;
+      --sat: 100%;
+      --lum: 50%;
+    }
+  
+    /*********/
+    /* Roses */
+    /*********/
+    .deeppink {
+      --name: deeppink;
+
+      --hex: #ff1493;
+
+      --red: 255;
+      --green: 20;
+      --blue: 147;
+
+      --hue: 328;
+      --sat: 100%;
+      --lum: 54%;
+    }
+
+    .hotpink {
+      --name: hotpink;
+
+      --hex: #ff69b4;
+
+      --red: 255;
+      --green: 105;
+      --blue: 180;
+
+      --hue: 330;
+      --sat: 100%;
+      --lum: 71%;
+    }
+
+    .lavenderblush {
+      --name: lavenderblush;
+
+      --hex: #fff0f5;
+
+      --red: 255;
+      --green: 240;
+      --blue: 245;
+
+      --hue: 340;
+      --sat: 100%;
+      --lum: 97%;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="grid grid-cols4">
+    <template id="tpl-swatch">
+      <section class="grid grid-cols2">
+        <article class="name"></article>
+        <article class="hex"></article>
+        <article class="rgb"></article>
+        <article class="hsl"></article>
+      </section>  
+    </template>
+  </main>
+  <script>
+    // TODO: add getComputedStyle for background color to data-color, hopefully it preserves the mode
+    const articles = document.querySelectorAll('article');
+
+    articles.forEach(function(item) {
+      item.setAttribute('data-color',getComputedStyle(item).getPropertyValue('--clr').trim());
+    });
+
+    
+  </script>
+</body>
+</html>

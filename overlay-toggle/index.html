@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overlay Toggle</title>
+  <style>
+    :root {
+      --hue: 0;
+      /* https://youtu.be/kZOJCVvyF-4?t=1276 */
+      --comp: calc(1deg * (var(--hue) + 60));
+    }
+    body {
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .overlay {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+    .overlay > * {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+    }
+
+    main {
+      height: 100vh;
+      display: flex;
+    }
+    article {
+      width: 30vmin;
+      height: 30vmin;
+      margin: auto;
+
+      border-radius: 50%;
+      background: hsl(var(--hue),100%,90%);
+    }
+    header {
+      z-index: 2;
+    }
+
+    aside {
+      width: 100vw;
+      height: 100vh;
+
+      background-image: url('https://picsum.photos/id/1004/500/500');
+      background-size: cover;
+      background-position: center;
+
+      opacity: 0.5;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .split-bg {
+      background-image: linear-gradient(black,transparent);
+      background-color: hsl(var(--comp), 20%, 50%);
+    }
+  </style>
+</head>
+<body class="overlay">
+  <main>
+    <article></article>
+  </main>
+  <aside></aside>
+  <header>
+    <ul>
+      <li><button id="tissue">tissue</button></li>
+      <li><button id="bg">split-bg</button></li>
+      <li><input id="hue" type="range" min="0" max="360"></li>
+    </ul>
+  </header>
+  <script>
+    tissue.addEventListener('click',function(evt) {
+      document.querySelector('aside').classList.toggle('hidden');
+    });
+    bg.addEventListener('click',function(evt) {
+      document.querySelector('body').classList.toggle('split-bg');
+    });
+    hue.addEventListener('input',function(evt) {
+      document.querySelector(':root').style.setProperty("--hue", hue.value);;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --cell-w: 10vmin;
+      --grid-col: 3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .overlay {
+      display: grid;
+      place-items: center;
+      max-width: 100vmin;
+      margin: auto;
+    }
+
+    .overlay > * {
+      grid-row: 1 / -1;
+      grid-column: 1 / -1;
+      
+      display: grid;
+      grid-template-columns: repeat(var(--grid-col), var(--cell-w));
+      grid-template-rows: repeat(var(--grid-col), var(--cell-w));
+      grid-gap: 5em;
+
+      place-items: stretch;
+    }
+
+    .full-vp {
+      height: 100vh;
+    }
+
+    .connections > * {
+      stroke-width: 1em;
+      padding: calc(var(--cell-w) / 3);
+    }
+
+    .connections > .tall {
+      height: 100%;
+      grid-row: span 2;
+    }
+
+    .connections > .wide {
+      width: 100%;
+      grid-column: span 2;
+    }
+
+    .connections > .diag {
+      height: 100%;
+      width: 100%;
+      
+      grid-row: span 2;
+      grid-column: span 2;
+    }
+
+    .team-grid > * {
+      border-radius: 50%;
+      background-color: skyblue;
+      opacity: .8;
+    }
+  </style>
+</head>
+<body>
+  <main class="overlay full-vp">
+    <aside class="connections">
+      <svg class="tall">
+        <line x1="50%" y1="0%" x2="50%" y2="100%" stroke="black"/>
+      </svg>
+      <svg class="wide">
+        <line x1="0%" y1="50%" x2="100%" y2="50%" stroke="black"/>
+      </svg>
+      <svg class="diag" preserveAspectRatio="none">
+        <line x1="0%" y1="0%" x2="100%" y2="100%" stroke="black"/>
+      </svg>
+    </aside>
+    <section class="team-grid">
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+      <article></article>
+    </section>
+  </main>
+</body>
+</html>
